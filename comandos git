@@ -1,0 +1,25 @@
+comandos git 
+
+git init . :tornar a pasta especial
+git status
+git add arq : escolhe oq vai pro save (ou seja, commit)
+nano nome arquivo.txt : control o para escrever e control x para sair.
+git log : ve todos os commits
+
+
+
+
+#FLUXO DE TRABALHO:
+
+1.cria um diretorio
+2.inicia o git nesse diretorio
+3.edita ou cria arquivos
+4.git status
+5.git add .
+6.git status
+7.git commit -m "mensagem"
+8.git status
+9.git log
+10.volta pro passo 3
+
+

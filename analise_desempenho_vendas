@@ -1,0 +1,48 @@
+import pandas as pd
+
+# dados criados manualmente
+dados = {
+    'vendedor': ['ana', 'bruno', 'carlos', 'ana', 'bruno', 'carlos'],
+    'vendas': [1200, 800, 600, 1500, 900, 700],
+    'meta': [1000, 1000, 1000, 1000, 1000, 1000]
+}
+
+df = pd.dataframe(dados)
+
+print(df)
+
+# métricas por linha
+df['dif_meta'] = df['vendas'] - df['meta']
+df['perc_meta'] = df['vendas'] / df['meta']
+
+# regra simples de classificação
+def classificar_performance(p):
+    if p >= 1.2:
+        return 'excelente'
+    elif p >= 1.0:
+        return 'boa'
+    elif p >= 0.8:
+        return 'atencao'
+    else:
+        return 'ruim'
+
+df['performance'] = df['perc_meta'].apply(classificar_performance)
+
+# comparação com a média geral
+media_vendas = df['vendas'].mean()
+df['acima_da_media'] = df['vendas'] > media_vendas
+
+# filtros comuns de análise
+vendas_ruins = df[df['performance'] == 'ruim']
+vendas_acima_media = df[df['acima_da_media']]
+
+print('\ntabela final')
+print(df)
+
+print('\nvendas com performance ruim')
+print(vendas_ruins)
+
+print('\nvendas acima da media')
+print(vendas_acima_media)
+
+print('\nmedia geral de vendas:', media_vendas)

@@ -1,0 +1,13 @@
+Comandos importantes do bash:
+
+ls: oq tem no diretorio
+cd: change dir, muda diretório
+pwd: print work dir, onde estamos?
+control l para limpar
+
+cd .. -> volta um diretório 
+
+mkdir: make dir, criando uma pasta nova
+cat arq: mostra oq tem no arquivo
+rm -rf .arq/ --> remove arquivo 
+
