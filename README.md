@@ -1,2 +1,2 @@
-#solutions
-doing my best. everyday.
+learning git and github! :)
+
